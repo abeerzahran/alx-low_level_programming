@@ -10,13 +10,13 @@ int main(void)
 {
 	char st[] = "_putchar";
 	int i = 0;
-	
+
 	while (st[i] != '\0')
 	{
 		_putchar(st[i]);
 		i++;
 	}
 	_putchar(10);
-	
+
 	return (0);
 }

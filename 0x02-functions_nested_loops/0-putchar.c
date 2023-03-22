@@ -10,6 +10,7 @@ int main(void)
 {
 	int i = 0;
 	char st[] = "_putchar";
+	
 	while (st[i] != '\0')
 	{
 		_putchar(st[i]);

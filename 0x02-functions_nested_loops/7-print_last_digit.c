@@ -10,13 +10,26 @@
 
 int print_last_digit(int i)
 {
-	int x;
+	int ld;
 
+	/**
+	 * first we check if the number is
+	 * a negative value and if it is
+	 * we will multiply the remainder
+	 * with -1 to change it to a + value
+	 * else if its not a negative value
+	 * we just get the reminder
+	*/
 	if (i < 0)
-	{
-		i = -1 * i;
-	}
-	x = i % 10;
-	_putchar('0' + x);
-	return (x);
+		ld = -1 * (i % 10);
+	else
+		ld = i % 10;
+
+	/**
+	 * we have to output each character because
+	 * if we don't it will only return the last digit
+	 * of the number that was checked but not all the numbers
+	*/
+	_putchar(ld + '0');
+	return (ld);
 }

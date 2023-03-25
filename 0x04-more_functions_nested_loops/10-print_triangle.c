@@ -23,6 +23,10 @@ void print_triangle(int size)
 			_putchar('#');
 		}
 		hash++;
-		_putchar('\n');
+		if (i < size - 1)
+		{
+			_putchar('\n');
+		}
 	}
+	_putchar('\n');
 }

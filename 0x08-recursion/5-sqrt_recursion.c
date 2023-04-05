@@ -13,7 +13,7 @@ int find_sqrt(int n, int i)
 		return (i);
 	if (i > (n / i))
 		return (-1);
-	find_sqrt(n, i + 1);
+	return (find_sqrt(n, i + 1));
 }
 
 /**

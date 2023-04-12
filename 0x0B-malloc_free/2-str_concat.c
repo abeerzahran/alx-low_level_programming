@@ -20,15 +20,15 @@ char *str_concat(char *s1, char *s2)
 		;
 	for (siz2 = 0; s2[siz2] != '\0'; siz2++)
 		;
-	st = malloc((i + j + 2) * sizeof(char));
+	st = malloc((siz1 + siz2 + 2) * sizeof(char));
 	if (st == NULL)
 		return (NULL);
 
-	for (i = 0; i < siz1; i++)
+	for (i = 0; i <= siz1; i++)
 	{
 		st[i] = s1[i];
 	}
-	for (j = i + 1; j < siz2 + siz2; j++)
+	for (j = i + 1; j <= siz2 + siz2; j++)
 	{
 		st[j] = s2[j];
 	}

@@ -35,9 +35,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		st[i] = s1[i];
 	}
-	for (j = 0; j <= siz2; i++, j++)
+	for (j = 0; j < siz2; i++, j++)
 	{
 		st[i] = s2[j];
 	}
+	st[i] = '\0';
 	return (st);
 }

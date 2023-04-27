@@ -11,7 +11,7 @@
  */
 size_t print_list(const list_t *h)
 {
-	if (h->next != NULL)
+	if (h != NULL)
 	{
 		size_t n;
 

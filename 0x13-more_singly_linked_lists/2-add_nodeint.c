@@ -10,28 +10,17 @@
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-	size_t i;
-	list_t *new;
+	listint_t *new;
 
-	new = malloc(sizeof(list_t));
+	new = malloc(sizeof(listint_t));
+
 	if (new == NULL)
-	{
 		free(new);
 		return (NULL);
-	}
-	if (*head != NULL)
-	{
-		new->next = *head;
-	}
-	else
-		new->next = NULL;
 
-	new->str = strdup(str);
-
-	for (i = 0; str[i] != '\0'; i++)
-		;
+	new->n = n;
+	new->next = *head;
 	*head = new;
-	new->len = i;
 
 	return (*head);
 }

@@ -4,7 +4,7 @@
  * add_nodeint_end - adds a new node at the end
  * of a list_t list.
  * @head: head of the linked list.
- * @str: string to store in the list.
+ * @n: integer to store in the list.
  * Return: address of the head.
  */
 
@@ -21,7 +21,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	new->n = n;
 	new->next = NULL;
 	h = *head;
-	if(*head == NULL)
+	if (*head == NULL)
 	{
 		*head = new;
 	}

@@ -10,20 +10,18 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int c = 0;
+	unsigned int i;
 
-	if (n == 0 && index == 0)
-	{
+	if (n == 0 && index < 64)
 		return (0);
-	}
-	while (n)
+
+	for (i = 0; i <= 63; n >>= 1, i++)
 	{
-		if (c == index)
+		if (index == i)
 		{
 			return (n & 1);
 		}
-		n = n >> 1;
-		c++;
 	}
+
 	return (-1);
 }

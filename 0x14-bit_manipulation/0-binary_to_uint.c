@@ -54,6 +54,8 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int sum = 0;
 	char *str = revstr(b);
 
+	if (str == NULL)
+		return (0);
 	while (str[i] != '\0')
 	{
 		if (str[i] == '1')
